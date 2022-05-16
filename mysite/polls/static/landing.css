@@ -45,6 +45,9 @@ h2{
     background-color: transparent;
     border: 2px solid white;
     color: white;
+    height: 35px;
+    width: 130px;
+    cursor:pointer;
 }
 
 
