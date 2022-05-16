@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
 {%load static%}
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -13,33 +12,19 @@
 </head>
 <body>
 
-<div>
 
+    {% if all %}
+        {% for data in all %}
+        <ul class="list">
+            <li class="data">{{ data.first_name}}
+                {{data.last_name}}
+                {{data.birth_date}}
+                {{data.email}}</li>
+        </ul>
+        {% endfor %}
+    {% endif %}
 
-
-      <form method="POST">
-      {% csrf_token %}
-
-      <table>
-          <h1>Sign In</h1>
-        {{form.as_table}}
-      </table>
-     <div class="sign">  <input class="button"  type="submit" value="Submit form"></div>
-    </form>
-
-
-
-    <a class="show" href="../show/">Click Here To See All The Data</a>
-
-
-
-
-
-
-
- <br>
-
-
+<h2>.</h2>
     <h2>.</h2>
     <h2>.</h2>
     <h2>.</h2>
@@ -53,16 +38,8 @@
     <h2>.</h2>
     <h2>.</h2>
     <h2>.</h2>
-
-
-
-
-
-</div>
-
-
-
-
-
+    <h2>.</h2>
+    <h2>.</h2>
+    <h2>.</h2>
 </body>
 </html>

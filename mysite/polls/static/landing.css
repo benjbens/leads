@@ -58,5 +58,22 @@ h2{
 }
 
 
+.data{
+    color: red;
+}
+
+.show{
+    display: flex;
+    justify-content: center;
+    color: red;
+    /*border: solid red 2px;*/
+    margin: 90px;
+    /*border-radius: 25px;*/
+    /*padding: 10px;*/
+    /*width: 250px;*/
+    /*height: 50px;*/
+
+}
+
 
 

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from . forms import CategoryForm
 from .models import Name
@@ -23,8 +23,18 @@ def get_name(request):
             new_name.save()
 
             print(first_name)
-            context['formInfo'] = [first_name,last_name,birth_date,email]
+            context['form'] = CategoryForm()
             return render(request, 'landing.html', context)
     else:
         context['form'] = CategoryForm()
     return render(request, 'landing.html', context)
+
+
+def show_data(request):
+    context = {'all': Name.objects.all(), 'form': CategoryForm()}
+    return render(request, 'show.html', context)
+
+
+
+
+
